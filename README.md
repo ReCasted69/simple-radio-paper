@@ -1,6 +1,6 @@
 # 📻 SimpleRadio
 
-A wireless radio system for Paper 1.21.x. Build real radios in-world, tune them to a frequency, and beam redstone signals — or your voice — across the map.
+A wireless radio system for Paper 1.26.x. Build real radios in-world, tune them to a frequency, and beam redstone signals — or your voice — across the map.
 
 ## ✨ Features
 

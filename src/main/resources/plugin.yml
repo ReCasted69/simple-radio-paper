@@ -1,7 +1,7 @@
 name: SimpleRadio
-version: 0.1.0
+version: 0.1.1
 main: com.lanvexstudios.SimpleRadio
-api-version: "1.21"
+api-version: "26.2"
 author: lanvexstudios
 description: A realistic wireless radio system.
 softdepend: [voicechat]
