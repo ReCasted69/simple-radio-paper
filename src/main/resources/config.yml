@@ -1,0 +1,101 @@
+# ============================================================
+# SimpleRadio configuration
+# ============================================================
+
+physics:
+  # --- Range ----------------------------------------------------------
+  # Max range (blocks) with a bare base + lightning rod (no copper/netherite).
+  base-range: 100
+  # Extra range added per antenna block of each type, summed on top of base-range.
+  range-per-rod: 250
+  range-per-copper: 500
+  range-per-netherite: 1000000
+  # Range (blocks) lost per solid block the signal has to pass through between
+  # the two antennas. Set to 0 to disable terrain/obstacle attenuation.
+  obstruction-range-penalty: 1.0
+
+  frequency-min-mhz: 0.1
+  frequency-max-mhz: 108.0
+  tick-interval: 1
+
+  # --- Interference ----------------------------------------------------
+  # When true, multiple transmitters sharing a frequency interfere with
+  # each other, degrading signal quality at the receivers.
+  interference-enabled: true
+  # Chance (0.0 - 1.0) per tick that a receiver suffering interference
+  # drops its redstone output for one tick (audible "static").
+  interference-flicker-chance: 0.35
+  # Signal percentage thresholds that define the three quality tiers.
+  signal-clear-threshold: 60
+  signal-strong-threshold: 90
+
+# How often (in ticks) to refresh the radio GUI while it is open. 0 disables.
+gui:
+  refresh-ticks: 5
+  # Frequency step (MHz) applied when a player shift-clicks the frequency button.
+  coarse-step-mhz: 1.0
+  # --- Frequency scanning ----------------------------------------------
+  # Step size (MHz) between scanned frequencies.
+  scan-step-mhz: 0.2
+  # Ticks to wait between scan steps while the scan GUI control is active.
+  scan-interval-ticks: 20
+
+# --- Automatic assembly -------------------------------------------------
+# Radios are detected automatically when a valid base + antenna is built.
+
+base-blocks:
+  - CHISELED_COPPER
+  - WAXED_CHISELED_COPPER
+
+antenna:
+  rods:
+    - LIGHTNING_ROD
+  copper:
+    - COPPER_BLOCK
+    - WAXED_COPPER_BLOCK
+  netherite:
+    - NETHERITE_BLOCK
+
+redstone:
+  attenuate-by-signal: false
+
+voice:
+  # Simple Voice Chat is optional. Without it, redstone and radio tuning still
+  # work normally.
+  enabled: true
+  mic-radius: 8
+  speaker-range: 32
+  category: radio
+  volume: 1.0
+  # Extra pickup radius added per antenna block of height.
+  pickup-radius-scale: 0.5
+  pickup-radius-max: 16
+  attenuate-by-signal: true
+  # When true, a transmitter only relays voice while its redstone input is powered.
+  # Set to false for open voice radios that work without a lever or button.
+  require-keyed: false
+  # When true, a player hears their own voice played back from any sound
+  # receiver their transmission reaches (radio "sidetone").
+  hear-own-transmission: true
+  # When true, voice playback distance/volume crackles down with weak signal.
+  crackle-by-signal: true
+  # Note blocks are optional. Place one next to the base to use it as the
+  # speaker position; otherwise the antenna top is used.
+
+# --- Visuals ------------------------------------------------------------
+# All decorative particles (rings, beams, sparks, voice indicators) have been
+# removed. The only visual indicator is a small burst of redstone dust at a
+# Redstone Receiver while it is actively receiving.
+effects:
+  receive-dust: true
+
+# --- Lightning overload ------------------------------------------------
+lightning:
+  # Maximum distance (blocks) between a strike and an antenna top to trigger.
+  strike-radius: 1.5
+  # Block the burnt-out base is turned into.
+  result-block: COAL_BLOCK
+  # Whether fire spawns around the destroyed radio.
+  fire: true
+  # Radius of the fire spread (1 = the four cardinal + diagonal blocks).
+  fire-radius: 1

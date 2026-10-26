@@ -1,0 +1,23 @@
+name: SimpleRadio
+version: 0.1.0
+main: com.lanvexstudios.SimpleRadio
+api-version: "1.21"
+author: lanvexstudios
+description: A realistic wireless radio system.
+softdepend: [voicechat]
+
+commands:
+  radio:
+    description: Configure and manage radios
+    usage: /radio <help|setfreq|mode|scan|info|list|debug|reload>
+
+permissions:
+  simpleradio.admin:
+    description: Allows radio list, debug, and reload commands
+    default: op
+  simpleradio.use:
+    description: Allows using and configuring radios
+    default: true
+  simpleradio.assemble:
+    description: Allows building radios
+    default: true

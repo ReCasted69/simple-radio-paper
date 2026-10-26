@@ -1,0 +1,56 @@
+prefix: "&8[&bRadio&8]&r"
+inactive-no-rod: "&cNo antenna yet. Place at least one lightning rod on top of the base."
+cannot-break-powered: "&cThis receiver is outputting redstone. Break the antenna or switch modes first."
+no-permission: "&cYou don't have permission to do that."
+unknown-radio: "&cOpen a radio first."
+invalid-frequency: "&cInvalid frequency."
+frequency-set: "&aFrequency set to &b%freq% MHz."
+assembled: "&aRadio assembled! Right-click the base to configure. &7Sneak + right-click if you are holding a block."
+radio-removed: "&7Radio dismantled."
+mode-set: "&aMode set to &e%mode%&a."
+mode-invalid: "&cUnknown mode. Use transmitter, redstone, or sound."
+
+# Admin command
+no-radios: "&7No radios registered."
+list-header: "&7Registered radios (&f%count%&7):"
+list-entry: " &7- &f%pos% &7freq &b%freq% MHz &7mode &e%mode%"
+players-only: "&cPlayers only."
+config-reloaded: "&aConfiguration reloaded."
+
+# Radio info
+info-header: "&8&m-----&r &eRadio Info &8&m-----"
+info-line: "&7Frequency: &b%freq% MHz &8| &7Mode: &e%mode% &8| &7Range: &f%range% blocks"
+info-input: "&7Redstone input: &f%input%/15"
+info-signal: "&7Signal: &f%signal%% &8| &7Linked: &f%linked% &8| &7Quality: &f%quality%"
+
+# Scanning
+scan-start: "&aScanning &f%freq% MHz&a... (click Scan to stop)"
+scan-stop: "&cScanning stopped at &f%freq% MHz&c."
+
+# Help
+help-header: "&7How to use radios:"
+help-build: "&7Build: &fchiseled copper base &7+ &flightning rod antenna"
+help-open: "&7Right-click the base to tune. &7Sneak + click with a block in hand."
+help-setfreq: "&7/radio setfreq <mhz> &8- &7set the open radio's frequency"
+help-mode: "&7/radio mode <transmitter|redstone|sound> &8- &7set the mode"
+help-scan: "&7/radio scan &8- &7toggle frequency scanning"
+help-info: "&7/radio info &8- &7show the open radio's status"
+help-voice: "&7Voice chat is optional; install Simple Voice Chat to relay voice."
+help-list: "&7/radio list &8- &7list registered radios &8(admin)"
+help-debug: "&7/radio debug [x y z] &8- &7radio diagnostics &8(admin)"
+help-reload: "&7/radio reload &8- &7reload config and messages &8(admin)"
+
+# Debug
+debug-header: "&8&m-----&r &eRadio Debug &8&m-----"
+debug-location: "&7Location: &f%pos% &7world &f%world%"
+debug-base: "&7Base: &f%base% &8| &7Mode: &f%mode%"
+debug-frequency: "&7Frequency: &f%freq% MHz"
+debug-antenna: "&7Antenna: &f%rods% rods, %copper% copper, %netherite% netherite &8| &7height %height%"
+debug-range: "&7Max range: &f%range% blocks"
+debug-linked: "&7Linked: &f%linked% &8| &7Signal: &f%signal%% &8| &7Interference: %interference%"
+debug-source: "&7Source: &f%pos% &7dist %dist% blocks"
+debug-input: "&7Input: &f%input%/15 &8| &7Output: &f%output%/15"
+debug-receive-pass: "&aPASS &7(signal &f%signal%%&7 from &f%pos%&7)"
+debug-receive-fail: "&cFAIL &7(no active transmitter on this frequency)"
+debug-voice-pass: "&aPASS &7(voice enabled, speaker: &f%speaker%&7)"
+debug-voice-fail: "&cFAIL &7(%reasons%)"
